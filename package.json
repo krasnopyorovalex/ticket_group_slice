@@ -55,6 +55,7 @@
         "imagemin-pngquant": "^8.0.0",
         "imagemin-webp": "^5.0.0",
         "imagemin-zopfli": "^6.0.0",
+        "jquery": "latest",
         "require-dir": "^1.2.0",
         "stylelint": "^10.0.1",
         "stylelint-order": "^3.0.0",
@@ -64,6 +65,7 @@
         "yargs": "^13.2.4"
     },
     "dependencies": {
+        "owl.carousel": "^2.3.4",
         "smart-grid": "^2.1.2"
     }
 }
