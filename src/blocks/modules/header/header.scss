@@ -57,6 +57,15 @@ header {
         align-self: flex-end;
         .single_block {
             display: inline-block;
+            position: relative;
+            input {
+                padding: 8px 12px;
+            }
+            .icon_search {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+            }
         }
     }
 }

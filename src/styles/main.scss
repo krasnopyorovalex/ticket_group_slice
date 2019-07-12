@@ -5,3 +5,10 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+
+.icon {
+    display: inline-block;
+}
+.icon_search {
+    @include sprite($search);
+}

@@ -65,6 +65,8 @@
         "yargs": "^13.2.4"
     },
     "dependencies": {
+        "gulp.spritesmith": "^6.10.1",
+        "merge-stream": "^2.0.0",
         "owl.carousel": "^2.3.4",
         "smart-grid": "^2.1.2"
     }

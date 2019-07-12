@@ -37,7 +37,10 @@ const requireDir = require("require-dir"),
                 "!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}"
             ],
             dist: "./dist/img/",
-            watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}"
+            watch: [
+                "./src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}",
+                "!./src/img/icons-sprite/*.{jpg,jpeg,png,tiff}"
+            ]
         },
         webp: {
             src: [
@@ -54,6 +57,12 @@ const requireDir = require("require-dir"),
             src: "./src/img/svg/*.svg",
             dist: "./dist/img/sprites/",
             watch: "./src/img/svg/*.svg"
+        },
+        spritesImg: {
+            src: "./src/img/icons-sprite/*.png",
+            dist: "./dist/img/sprites/",
+            watch: "./src/img/icons-sprite/*.png",
+            out: "./src/styles/vendor/import/"
         },
         fonts: {
             src: "./src/fonts/**/*.{woff,woff2}",
