@@ -1,12 +1,13 @@
 h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
+    margin: 0 0 1rem 0;
     padding: 0;
 }
 
 body {
     font-family: Verdana, serif;
     background-color: #141414;
-    color: #888;
+    color: $textColorBody;
+    font-size: rem(14);
 }
 menu {
     padding: 0;
@@ -17,8 +18,20 @@ a {
     transition: all 300ms ease;
 }
 svg {
-    fill: #ffffff;
     transition: all 300ms ease;
+}
+button, a {
+    outline: none;
+}
+.hidden {
+    display: none;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+img[src=""] {
+    display: none;
 }
 .container {
     @include container();
@@ -26,6 +39,36 @@ svg {
     @include md(max-width, rem(690));
     @include lg(max-width, rem(930));
     @include xl(max-width, rem(1110));
+}
+.row {
+    @include row-flex();
+}
+.col-12 {
+    @include col();
+    @include size(12);
+}
+.col-4 {
+    @include col();
+    @include size(4);
+}
+.col-3 {
+    @include col();
+    @include size(3);
+}
+.col-6 {
+    @include col();
+    @include size(6);
+}
+footer {
+    margin: 2rem 0;
+}
+p, ul {
+    line-height: 24px;
+    text-align: justify;
+    margin: 0 0 15px 0;
+}
+ul, ol {
+    padding: 0 0 0 2rem;
 }
 .debug {
     z-index: 10;

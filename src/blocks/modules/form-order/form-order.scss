@@ -1,0 +1,33 @@
+.box_popup-form {
+    width: 100%;
+}
+.form_order {
+    position: relative;
+    max-width: 380px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 1rem 0 0 0;
+    .single_block {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        padding: .6rem 2rem;
+        label, input {
+            display: block;
+            width: 100%;
+        }
+        &.submit {
+            text-align: center;
+            margin: .6rem 0 0 0;
+            background-color: $formFooterBg;
+        }
+        label {
+            margin: 0 0 .6rem 0;
+        }
+        input {
+            box-sizing: border-box;
+            border: 1px solid $colorBorderInput;
+            padding: 8px 12px;
+        }
+    }
+}

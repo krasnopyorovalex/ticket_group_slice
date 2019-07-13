@@ -1,0 +1,92 @@
+.tabs > ul {
+    background-color: $bgMenu;
+    color: $textColor1;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+.tabs > ul li {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        opacity: 0;
+        background-color: $colorBorderSolid;
+    }
+}
+.tabs>ul li.active, .tabs>ul li.active:hover {
+    background-color: $bgTabContent;
+    cursor: default;
+    color: $textColor1;
+}
+.tabs>ul li.active {
+    &:after {
+        opacity: 1;
+    }
+}
+.tabs>ul li:hover {
+    color: #fff;
+}
+.tabs {
+    align-items: stretch;
+    margin-bottom: 1em;
+    overflow: hidden;
+    line-height: 22px;
+    font-size: rem(14);
+}
+.tabs > div {
+    position: relative;
+    color: $textColor1;
+    background-color: $bgTabContent;
+}
+.list_commands {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    > div {
+        box-sizing: border-box;
+        display: flex;
+        flex-basis: 20%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: .5rem;
+        transition: all 300ms ease;
+        font-size: rem(13);
+        border-bottom: 1px solid $colorBorderSolid;
+        border-left: 1px solid $colorBorderSolid;
+        border-right: 1px solid $colorBorderSolid;
+        &:hover, &.is_loaded {
+            background-color: #fff;
+            cursor: pointer;
+        }
+        &:last-child {
+            border-right: 1px solid $colorBorderSolid;
+        }
+        &.active {
+            background-color: $bgTabContentActive;
+        }
+        & + div, &:first-child {
+            border-left: none;
+        }
+        span {
+            margin: 0 auto;
+        }
+        img {
+            width: 22px;
+            vertical-align: middle;
+        }
+    }
+}

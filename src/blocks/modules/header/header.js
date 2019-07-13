@@ -9,4 +9,14 @@
         });
     }
 
+    let menu = $(".menu,.f_menu");
+    if(menu.length) {
+        menu.on("click", "li", function (e) {
+            e.preventDefault();
+            let _this = $(this),
+                scrollTo = "#" + _this.attr("data-target");
+            return $.scrollTo($(scrollTo), 750,  {offset: {top:-80} });
+        });
+    }
+
 })($);

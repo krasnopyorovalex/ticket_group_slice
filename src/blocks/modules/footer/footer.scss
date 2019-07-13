@@ -1,0 +1,105 @@
+.logo_company {
+    color: $textColor2;
+    font-size: rem(26);
+    img {
+        display: inline-block;
+        max-width: 80px;
+    }
+}
+.form_subscribe {
+    margin: 1rem 0;
+    svg {
+        width: 30px;
+        vertical-align: middle;
+        height: 25px;
+        fill: #ffffff;
+    }
+    .single_block {
+        &.submit {
+            margin: .5rem 0 0 0;
+        }
+        &.email {
+            display: flex;
+            align-items: center;
+            input {
+                width: 100%;
+                margin: 0 0 0 .5rem;
+                border: 1px solid $colorBorderInput;
+                padding: 8px 12px;
+            }
+        }
+    }
+}
+.btn_subscribe {
+    width: 100%;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background: none;
+    &:hover {
+        background-color: #ffffff;
+        color: $textColor1;
+    }
+}
+.contacts {
+    color: $textColor2;
+    text-align: center;
+    .title {
+        color: $textColor2;
+        font-size: rem(18);
+        font-weight: 700;
+    }
+    a {
+        color: $textColor2;
+    }
+    .address, .phones {
+        > div {
+            display: block;
+            margin: .5rem 0;
+            line-height: 22px;
+            &:first-child {
+                font-weight: 700;
+            }
+        }
+    }
+}
+.f_menu {
+    text-align: center;
+    color: $textColor2;
+    list-style: none;
+    line-height: 24px;
+    font-size: rem(16);
+    font-weight: 700;
+    li {
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+        & + li {
+            margin: .5rem 0 0 0;
+        }
+    }
+}
+.f_socials {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    a {
+        display: inline-block;
+        & + a {
+            margin: 0 0 0 .5rem;
+        }
+    }
+    svg {
+        fill: #ffffff;
+        display: inline-block;
+        width: 20px;
+        height: 24px;
+    }
+}
+.payment_methods {
+    text-align: center;
+    svg {
+        display: inline-block;
+        width: 55px;
+        height: 34px;
+    }
+}

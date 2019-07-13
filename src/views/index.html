@@ -186,7 +186,45 @@
             </div>
         </section>
 
+        @@include("../blocks/modules/tabs/tabs.html")
+        @@include("../blocks/modules/schedule/schedule.html")
+
+        <section id="about" class="simple_text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="seo_text">
+                            <h2>Почему нас выбирают самые требовательные клиенты</h2>
+                            <ul>
+                                <li>мы любим и понимаем футбол</li>
+                                <li>подбираем лучшие места на стадионах Европы и Латинской Америки</li>
+                                <li>гарантируем бронирование выбранных секторов</li>
+                                <li>организуем быструю доставку билетов</li>
+                                <li>берем на себя оформление документов, сопровождение в посольствах</li>
+                            </ul>
+                            <p>И еще немного о  нас:</p>
+                            <ul>
+                                <li>мы работаем в сфере спортивного туризма с 2002 года</li>
+                                <li>более 170 000 болельщиков съездили с нами на чемпионаты, матчи, раунды</li>
+                                <li>около 100 000 индивидуальных спортивных туров в нашей копилке</li>
+                                <li>ваши яркие впечатления, бурные эмоции и незабываемый отдых - гарантированы</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @@include("../blocks/modules/slider/slider.html")
+
+        <section class="map">
+
+        </section>
         @@include("../blocks/modules/footer/footer.html")
+        <div id="container-popup" class="popup">
+            @@include("../blocks/modules/form-order/form-order.html")
+        </div>
+        <div class="popup_bg"></div>
         <script src="../js/main.js"></script>
         <script src="../js/vendor.js"></script>
     </body>

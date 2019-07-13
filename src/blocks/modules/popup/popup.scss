@@ -1,0 +1,97 @@
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 15%;
+    right: 0;
+    left: 0;
+}
+.popup_bg {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.box_popup {
+    @include row-flex();
+    @include col();
+    @include size(12);
+    position: relative;
+    background-color: #ffffff;
+    &-image {
+        @include col();
+        @include size(6);
+        padding: 1rem;
+    }
+    &-content {
+        @include col();
+        @include size(6);
+        align-self: center;
+        padding: 1rem;
+    }
+}
+.tickets {
+    color: $textColor1;
+    &_item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        font-size: rem(14);
+        border-top: 1px solid #cccccc;
+        &:last-child {
+            border-bottom: 1px solid #cccccc;
+        }
+        > div {
+            width: 100%;
+        }
+        .line_left {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+        }
+        &-name {
+            padding: 0 0 0 10px;
+        }
+        &-price {
+            text-align: center;
+        }
+        &-count-box {
+            text-align: center;
+            > * {
+                display: inline-block;
+                vertical-align: middle;
+                color: $textColorBody;
+            }
+            span {
+                font-size: rem(20);
+                font-weight: 700;
+                cursor: pointer;
+            }
+            > div {
+                margin: 0 2px;
+                border: 1px solid #cccccc;
+                padding: 6px 12px;
+                border-radius: 3px;
+            }
+        }
+        &-order {
+            min-width: 140px;
+            .btn_order {
+                font-size: rem(12);
+                padding: 8px 16px;
+                border-radius: 5px;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="48px" viewBox="0 0 59 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Вектор</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="26.4660725 0.868990909 32.9604975 11.2777364 19.3789925 35.8009364 1.001525 46.2192545 0.1125425 45.6970091 25.314835 0.191454545"></polygon>
+        <polygon id="path-3" points="58.4649022 46.1432727 52.1751375 36.6894545 21.544204 37.0418182 1.62784218 47.0694545 1.63520109 47.9858182 58.4743636 47.3301818 58.4649022 46.1432727"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header" transform="translate(-20.000000, -51.000000)">
+            <g id="Логотип">
+                <g transform="translate(20.000000, 51.000000)">
+                    <g id="Вектор">
+                        <g id="Group-2">
+                            <g id="Group">
+                                <g id="Clipped">
+                                    <mask id="mask-2" fill="white">
+                                        <use xlink:href="#path-1"></use>
+                                    </mask>
+                                    <use id="Shape" fill="#D8D8D8" xlink:href="#path-1"></use>
+                                    <g id="Group" mask="url(#mask-2)">
+                                        <g transform="translate(-6.195000, 0.000000)" id="Shape">
+                                            <polygon fill="#FF6000" points="31.509835 0.191454545 6.3075425 45.6970091 16.707915 51.8097273 41.9102075 6.30417273"></polygon>
+                                            <polygon fill="#ED8300" points="45.295775 24.6199909 0.7403025 49.8792273 6.5140425 60.6868364 51.0684825 35.4276"></polygon>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                            <polygon id="Shape" fill="#F9D100" points="58.4649022 46.1432727 52.1751375 36.6894545 21.544204 37.0418182 1.62784218 47.0694545 1.63520109 47.9858182 58.4743636 47.3301818 58.4649022 46.1432727"></polygon>
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <g id="Shape"></g>
+                            <g id="Group" mask="url(#mask-4)">
+                                <g transform="translate(-12.486545, 16.363636)" id="Shape">
+                                    <polygon fill="#FFD31D" points="70.9609091 30.9665455 14.1217465 31.6221818 14.0355422 20.9094545 70.8747047 20.2538182"></polygon>
+                                    <polygon fill="#F13200" points="55.4041753 9.91745455 7.11816764 34.2283636 0.05782 25.1716364 48.3438276 0.861818182 55.4041753 9.91745455"></polygon>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="Clipped" transform="translate(1.180000, 36.000000)"></g>
+                        <polygon id="Shape" fill="#FF2400" points="41.619947 22.8051715 50.74 34.8 35.5982733 34.8 26.4771782 22.8051715"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

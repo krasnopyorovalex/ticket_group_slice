@@ -1,3 +1,12 @@
+import "owl.carousel/dist/owl.carousel.min.js";
 import "./sticky_menu"
+import "./tabs"
+import "./mask"
+import "./scrollTo"
 import "%modules%/header/header";
+import "%modules%/tabs/tabs";
+import "%modules%/schedule/schedule";
+import "%modules%/popup/popup";
+import "%modules%/slider/slider";
 import "%modules%/footer/footer"
+import "%modules%/form-order/form-order"
