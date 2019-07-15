@@ -13,8 +13,8 @@
     @include sprite($search);
 }
 .popular_matches {
-    margin: 2rem 0;
-    padding: 1rem 0;
+    padding: 3rem 0;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .scoreboard, .simple_text {
     margin: 2rem 0;
@@ -57,15 +57,24 @@
     }
     .match_order {
         margin: .5rem 0;
+        svg {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 4px 0 0;
+            fill: #fff;
+            vertical-align: middle;
+        }
     }
 }
 .btn {
     display: inline-block;
     position: relative;
     margin: .5rem 0;
+    border: none;
     padding: 10px 22px;
-    cursor: pointer;
     transition: all 300ms ease;
+    cursor: pointer;
     color: $textColor2;
     font-size: rem(14);
 }
@@ -121,10 +130,10 @@
     content: "";
     position: absolute;
     z-index: 10;
-    top: calc(50% - 13px);
-    left: calc(50% - 13px);
-    width: 26px;
-    height: 26px;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     -webkit-animation: 1.1s linear infinite load8;
@@ -133,7 +142,7 @@
     border-top: 3px solid $bgTabContent;
     border-right: 3px solid $bgTabContent;
     border-bottom: 3px solid $bgTabContent;
-    border-left: 3px solid $bgMenu;
+    border-left: 3px solid $bgBtnOrder;
 }
 @-webkit-keyframes load8 {
     0% {
@@ -168,6 +177,8 @@
 }
 .seo_text {
     color: $textColor2;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
 }
 .align_self-center {
     align-self: center;

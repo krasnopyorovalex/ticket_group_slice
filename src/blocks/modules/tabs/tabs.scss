@@ -72,6 +72,9 @@
             background-color: #fff;
             cursor: pointer;
         }
+        &.is_loaded {
+            color: transparent;
+        }
         &:last-child {
             border-right: 1px solid $colorBorderSolid;
         }

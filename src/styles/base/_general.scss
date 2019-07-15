@@ -5,9 +5,14 @@ h1, h2, h3, h4, h5, h6, ul {
 
 body {
     font-family: Verdana, serif;
-    background-color: #141414;
+    background-image: url('../img/bg.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: $textColorBody;
     font-size: rem(14);
+    background-color: rgba(0,0,0,0.55);
+    background-blend-mode: darken;
 }
 menu {
     padding: 0;

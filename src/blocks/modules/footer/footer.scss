@@ -93,6 +93,9 @@
         display: inline-block;
         width: 20px;
         height: 24px;
+        &:hover {
+            fill: $colorSocialsHover;
+        }
     }
 }
 .payment_methods {
@@ -102,4 +105,9 @@
         width: 55px;
         height: 34px;
     }
+}
+footer {
+    margin: 2rem 0 0 0;
+    padding: 2rem 0;
+    background-color: rgba(0, 0, 0, 0.6);
 }
