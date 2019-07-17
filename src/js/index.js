@@ -13,10 +13,13 @@ import "./import/modules.js";
                 0 : {
                     items: 1
                 },
-                480 : {
+                540 : {
                     items: 1
                 },
                 768 : {
+                    items: 2
+                },
+                991 : {
                     items: 3
                 }
             }

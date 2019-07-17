@@ -1,19 +1,16 @@
 .logo_company {
+    @include lg(text-align,left);
     color: $textColor2;
     font-size: rem(26);
+    text-align: center;
     img {
         display: inline-block;
         max-width: 80px;
     }
 }
 .form_subscribe {
-    margin: 1rem 0;
-    svg {
-        width: 30px;
-        vertical-align: middle;
-        height: 25px;
-        fill: #ffffff;
-    }
+    max-width: 320px;
+    margin: 1rem auto;
     .single_block {
         &.submit {
             margin: .5rem 0 0 0;
@@ -29,29 +26,31 @@
             }
         }
     }
+    svg {
+        width: 30px;
+        vertical-align: middle;
+        height: 25px;
+        fill: #ffffff;
+    }
 }
 .btn_subscribe {
     width: 100%;
-    border: 1px solid #ffffff;
     border-radius: 5px;
     background: none;
     &:hover {
         background-color: #ffffff;
         color: $textColor1;
     }
+    &.btn {
+        border: 1px solid #ffffff;
+    }
 }
 .contacts {
     color: $textColor2;
-    text-align: center;
-    .title {
-        color: $textColor2;
-        font-size: rem(18);
-        font-weight: 700;
-    }
-    a {
-        color: $textColor2;
-    }
+    display: inline-block;
     .address, .phones {
+        @include lg(font-size,rem(14));
+        font-size: rem(16);
         > div {
             display: block;
             margin: .5rem 0;
@@ -61,8 +60,17 @@
             }
         }
     }
+    .phones {
+        margin: 1rem 0 0 0;
+    }
+    a {
+        color: $textColor2;
+    }
 }
 .f_menu {
+    @include lg(display,block);
+    display: none;
+    padding: 0;
     text-align: center;
     color: $textColor2;
     list-style: none;
@@ -80,8 +88,10 @@
     }
 }
 .f_socials {
+    @include lg(display,block);
+    display: none;
     text-align: center;
-    margin: 0 0 1rem 0;
+    margin: 2rem 0 0 0;
     a {
         display: inline-block;
         & + a {
@@ -94,7 +104,7 @@
         width: 20px;
         height: 24px;
         &:hover {
-            fill: $colorSocialsHover;
+            fill: $colorSocialsFooterHover;
         }
     }
 }
@@ -110,4 +120,7 @@ footer {
     margin: 2rem 0 0 0;
     padding: 2rem 0;
     background-color: rgba(0, 0, 0, 0.6);
+    a:hover {
+        color: $colorSocialsFooterHover;
+    }
 }

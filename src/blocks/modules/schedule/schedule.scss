@@ -1,47 +1,37 @@
 .match_schedule {
     margin: 1rem 0;
     &-row {
+        @include lg(flex-wrap,nowrap);
+        @include lg(padding,0.5rem);
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         text-align: center;
-        font-size: rem(14);
-        padding: .5rem;
+        padding: 1rem;
         background-color: $bgSchedule;
         color: $textColor1;
-        & + .match_schedule-row {
-            border-top: 1px solid $colorBorderSolid;
-        }
-        > div {
-            width: 100%;
-            padding: 0 1rem;
-            &:first-child {
-                padding: 0 1rem 0 0;
-            }
-            &:last-child {
-                padding: 0 0 0 1rem;
-            }
-        }
-        svg {
-            display: inline-block;
-            vertical-align: middle;
-            fill: $colorScheduleSvg;
-            width: 20px;
-            height: 20px;
-        }
         .time {
-            max-width: 150px;
+            @include lg(max-width,150px);
+            @include lg(font-size,rem(14));
+            font-size: rem(18);
             span {
+                @include lg(font-size,rem(12));
                 display: block;
-                font-size: rem(12);
+                font-size: rem(16);
                 color: $colorScheduleSpan;
             }
         }
         .commands {
+            @include lg(font-size,rem(14));
             position: relative;
+            font-size: rem(18);
+            .delimiter {
+                margin: 0 4px;
+            }
             img {
-                position: absolute;
-                top: -6px;
+                @include lg(position,absolute);
+                @include lg(top,-6px);
                 width: 22px;
                 vertical-align: middle;
                 &:first-child {
@@ -54,31 +44,30 @@
             > div {
                 display: inline-block;
             }
-            .delimiter {
-                margin: 0 4px;
-            }
         }
         .location {
+            @include lg(max-width,280px);
+            @include lg(font-size,rem(14));
             display: block;
-            font-size: rem(16);
+            font-size: rem(18);
             position: relative;
-            max-width: 280px;
             >svg {
-                position: absolute;
-                top: 0;
-                left: 1rem;
+                @include lg(position,absolute);
+                @include lg(top,0);
+                @include lg(left,1rem);
             }
             span {
+                @include lg(font-size,rem(12));
                 color: $colorScheduleSpan;
                 display: block;
                 margin: .4rem 0;
                 padding: 0 0 0 28px;
-                font-size: rem(12);
+                font-size: rem(14);
             }
         }
         .order {
+            @include lg(max-width,180px);
             text-align: center;
-            max-width: 180px;
             .btn_order {
                 background-color: $colorScheduleSpan;
                 color: #ffffff;
@@ -105,6 +94,27 @@
             &:hover {
                 text-decoration: underline;
             }
+        }
+        & + .match_schedule-row {
+            border-top: 1px solid $colorBorderSolid;
+        }
+        > div {
+            @include lg(padding,0 1rem);
+            width: 100%;
+            padding: .4rem 1rem;
+            &:first-child {
+                padding: 0 1rem 0 0;
+            }
+            &:last-child {
+                padding: 0 0 0 1rem;
+            }
+        }
+        svg {
+            display: inline-block;
+            vertical-align: middle;
+            fill: $colorScheduleSvg;
+            width: 20px;
+            height: 20px;
         }
     }
 }

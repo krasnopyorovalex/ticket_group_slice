@@ -20,10 +20,13 @@
     margin: 2rem 0;
 }
 .popular_matches-carousel-item {
+    @include lg(font-size,rem(14));
     color: #ffffff;
     text-align: center;
+    font-size: rem(18);
     .match_date-time {
-        font-size: rem(14);
+        @include lg(font-size,rem(14));
+        font-size: rem(18);
     }
     .match_commands {
         @include row-flex();
@@ -40,20 +43,21 @@
         }
     }
     .match_stadium, .match_country {
-        font-size: rem(12);
+        @include lg(font-size,rem(12));
+        font-size: rem(14);
     }
     .match_stadium {
         margin: 0 0 5px 0;
     }
     .match_country {
+
+        display: inline-block;
         img {
             display: inline-block;
             width: 25px;
             margin: 0 0 0 4px;
             vertical-align: middle;
         }
-
-        display: inline-block;
     }
     .match_order {
         margin: .5rem 0;
@@ -68,6 +72,7 @@
     }
 }
 .btn {
+    @include lg(font-size,rem(14));
     display: inline-block;
     position: relative;
     margin: .5rem 0;
@@ -76,7 +81,7 @@
     transition: all 300ms ease;
     cursor: pointer;
     color: $textColor2;
-    font-size: rem(14);
+    font-size: rem(16);
 }
 .btn_order {
     background-color: $bgBtnOrder;
@@ -101,7 +106,7 @@
 }
 .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 16px);
     width: 32px;
     height: 32px;
     border: 1px solid #ffffff;
@@ -121,7 +126,7 @@
     right: 0;
 }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-    background: #fcf300;
+    background: #c89dd9;
 }
 .is_loaded {
     position: relative;
@@ -176,10 +181,15 @@
     }
 }
 .seo_text {
+    @include lg(font-size,rem(14));
     color: $textColor2;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 1.5rem;
+    font-size: rem(16);
 }
 .align_self-center {
     align-self: center;
+}
+.text_center {
+    text-align: center;
 }

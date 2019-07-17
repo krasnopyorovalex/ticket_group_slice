@@ -1,11 +1,11 @@
 (function($){
-    jQuery.fn.lightTabs = function(options){
+    jQuery.fn.lightTabs = function(){
 
-        var createTabs = function(){
-            tabs = this;
-            i = 0;
+        let createTabs = function(){
+            const tabs = this;
+            let i = 0;
 
-            showPage = function(i){
+            let showPage = function(i){
                 $(tabs).children("div").children("div").hide();
                 $(tabs).children("div").children("div").eq(i).fadeIn("fast");
                 $(tabs).children("ul").children("li").removeClass("active");
@@ -20,9 +20,15 @@
             });
 
             $(tabs).children("ul").children("li").click(function(){
-                showPage(parseInt($(this).attr("data-page")));
+                let that = $(this);
+                if (that.hasClass("active")) {
+                    return false;
+                }
+
+                return showPage(parseInt(that.attr("data-page")));
             });
         };
+
         return this.each(createTabs);
     };
 })(jQuery);
