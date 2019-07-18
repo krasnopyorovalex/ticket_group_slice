@@ -13,4 +13,12 @@
         });
     }
 
+    let listStages = $(".tab_list-stages");
+    if(listStages.length){
+        listStages.on("click", " > div", function () {
+            let _this = $(this);
+            return _this.siblings("div").removeClass("active") && _this.addClass("active");
+        });
+    }
+
 })($);

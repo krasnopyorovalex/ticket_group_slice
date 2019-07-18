@@ -10,3 +10,4 @@ import "%modules%/popup/popup";
 import "%modules%/slider/slider";
 import "%modules%/footer/footer"
 import "%modules%/form-order/form-order"
+import "%modules%/form-recall/form-recall"

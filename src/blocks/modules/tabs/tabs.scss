@@ -1,9 +1,23 @@
 .tabs {
     align-items: stretch;
-    margin-bottom: 1em;
+    position: relative;
     overflow: hidden;
+    margin-bottom: 1em;
     line-height: 22px;
     font-size: rem(14);
+    border-top: 1px solid $colorBorderSolid;
+    border-right: 1px solid $colorBorderSolid;
+    border-left: 1px solid $colorBorderSolid;
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $colorBorderSolid;
+    }
 }
 .tabs > div {
     position: relative;
@@ -22,6 +36,8 @@
     box-shadow: 0 2px 1px rgba(0, 0, 0, .5);
     li {
         @include lg(border-bottom,1px solid $colorBorderSolid);
+        @include lg(border-right,1px solid $colorBorderSolid);
+        box-sizing: border-box;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -29,13 +45,16 @@
         width: 100%;
         padding: 10px 15px;
         transition: all 300ms ease;
-        border-top: 1px solid $colorBorderSolid;
-        border-right: 1px solid $colorBorderSolid;
+        border-right: none;
+        border-bottom: 1px solid $colorBorderSolid;
         cursor: pointer;
         text-transform: uppercase;
         text-align: center;
         &:hover {
             color: #fff;
+        }
+        &:last-child {
+            border-right: none;
         }
         &.active {
             &:after {
@@ -53,26 +72,33 @@
         }
     }
 }
-.list_commands {
+.tab_list-stages {
+    @include md(flex-wrap,nowrap);
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+    position: relative;
+    &:after {
+        @include sm(background,none);
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $colorBorderSolid;
+    }
     > div {
-        @include lg(font-size,rem(13));
         @include lg(flex-basis,20%);
-        @include sm(flex-basis,50%);
         @include md(flex-basis,33.33333%);
+        font-size: rem(13);
         box-sizing: border-box;
-        display: flex;
-        flex-basis: 100%;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
+        flex-basis: 50%;
         padding: .5rem;
-        transition: all 300ms ease;
-        font-size: rem(15);
+        text-align: center;
+        background-color: #ddd;
         border-bottom: 1px solid $colorBorderSolid;
-        border-left: 1px solid $colorBorderSolid;
         border-right: 1px solid $colorBorderSolid;
         &:hover, &.is_loaded {
             background-color: #fff;
@@ -82,13 +108,61 @@
             color: transparent;
         }
         &:last-child {
-            border-right: 1px solid $colorBorderSolid;
+            border-right: none;
         }
         &.active {
             background-color: $bgTabContentActive;
         }
-        & + div, &:first-child {
-            border-left: none;
+    }
+}
+.list_commands {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    > div {
+        @include lg(flex-basis,20%);
+        @include sm(flex-basis,50%);
+        @include md(flex-basis,33.33333%);
+        box-sizing: border-box;
+        display: flex;
+        flex-basis: 50%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: .5rem;
+        transition: all 300ms ease;
+        font-size: rem(13);
+        border-bottom: 1px solid $colorBorderSolid;
+        border-right: 1px solid $colorBorderSolid;
+        border-top: 1px solid $colorBorderSolid;
+        & + div {
+            border-top: none;
+        }
+        &:hover, &.is_loaded {
+            background-color: #fff;
+            cursor: pointer;
+        }
+        &.is_loaded {
+            color: transparent;
+        }
+        &:nth-child(2n) {
+            @include sm(border-right,none);
+            @include md(border-right,1px solid $colorBorderSolid);
+            @include lg(border-right,1px solid $colorBorderSolid);
+            border-right: none;
+        }
+        &:nth-child(3n) {
+            @include md(border-right,none);
+            @include lg(border-right,1px solid $colorBorderSolid);
+        }
+        &:nth-child(5n) {
+            @include lg(border-right,none);
+        }
+        &:first-child {
+            border-top: none;
+        }
+        &.active {
+            background-color: $bgTabContentActive;
         }
         span {
             margin: 0 auto;
