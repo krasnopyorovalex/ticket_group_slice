@@ -37,48 +37,6 @@
         textarea {
             min-height: 80px;
         }
-        &.i__agree {
-            label {
-                position: relative;
-                color: $textColor2;
-                font-size: rem(12);
-                line-height: normal;
-                padding-left: 30px;
-                &:after {
-                    content: "";
-                    position: absolute;
-                    top: 10px;
-                    left: 6px;
-                    width: 5px;
-                    height: 5px;
-                    background-color: $textColor1;
-                    border-radius: 50%;
-                    opacity: 0;
-                }
-                &:before {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 16px;
-                    height: 16px;
-                    border: solid 1px $textColor1;
-                    font-size: 0;
-                    border-radius: 50%;
-                    background: #fff;
-                    text-align: center;
-                }
-            }
-            input {
-                display: none;
-                margin-left: 0;
-                &:checked + label:after {
-                    top: 7px;
-                    opacity: 1;
-                }
-            }
-        }
     }
     .btn_recall {
         width: 70%;
@@ -89,9 +47,54 @@
         }
     }
 }
+.single_block {
+    &.i_agree {
+        label {
+            position: relative;
+            color: $textColor2;
+            font-size: rem(12);
+            line-height: normal;
+            padding-left: 30px;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 6px;
+                width: 5px;
+                height: 5px;
+                background-color: $textColor1;
+                border-radius: 50%;
+                opacity: 0;
+            }
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                border: solid 1px $textColor1;
+                font-size: 0;
+                border-radius: 50%;
+                background: #fff;
+                text-align: center;
+            }
+        }
+        input {
+            display: none;
+            margin-left: 0;
+            &:checked + label:after {
+                top: 7px;
+                opacity: 1;
+            }
+        }
+    }
+}
 .btn_recall {
     background: none;
 }
 .error {
     display: none;
+    font-size: rem(12);
 }

@@ -96,12 +96,36 @@ header {
 }
 .menu {
     @include row-flex();
+    transition: all 100ms ease;
     &_box {
         @include row-flex();
         @include col();
         @include size(12);
         flex-wrap: wrap;
         align-items: center;
+        .close-menu-btn {
+            display: none;
+            position: absolute;
+            top: 1em;
+            left: -30px;
+            width: 15px;
+            height: 15px;
+            &:before, &:after {
+                content: "";
+                position: absolute;
+                top: calc(50% - 1px);
+                left: -5px;
+                width: 25px;
+                height: 2px;
+                background-color: $textColor2;
+            }
+            &:before {
+                transform: rotate(45deg);
+            }
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
         &-header {
             @include md(display, block);
             display: none;
@@ -170,6 +194,47 @@ header {
                     fill: $textColor1;
                 }
             }
+        }
+    }
+    &.is_opened {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 4em;
+        padding: 2rem 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        .menu_box {
+            align-items: flex-start;
+            margin: 0;
+            .close-menu-btn {
+                display: block;
+            }
+            &-socials-box {
+                display: none;
+            }
+            &-header {
+                box-sizing: border-box;
+                display: block;
+                li {
+                    display: inline-block;
+                    font-size: rem(16);
+                    width: 100%;
+                    color: $textColor2;
+                    padding: 10px 20px;
+                    border-top: 1px solid #ccc;
+                    &:after {
+                        display: none;
+                    }
+                    &:last-child {
+                        border-bottom: 1px solid #ccc;
+                    }
+                }
+            }
+        }
+        .burger-menu {
+            display: none;
         }
     }
 }

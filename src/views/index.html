@@ -57,7 +57,7 @@
                             <img src="../img/ispany.jpg" alt="alt">
                         </div>
                         <div class="match_order">
-                            <div class="btn btn_order call_form-order call_form-order">
+                            <div class="btn btn_order" data-match="1">
                                 <svg>
                                     <use xlink:href="../img/sprites/sprite.svg#tickets"></use>
                                 </svg>
@@ -90,7 +90,7 @@
                             <img src="../img/ispany.jpg" alt="alt">
                         </div>
                         <div class="match_order">
-                            <div class="btn btn_order call_form-order">
+                            <div class="btn btn_order">
                                 <svg>
                                     <use xlink:href="../img/sprites/sprite.svg#tickets"></use>
                                 </svg>
@@ -123,7 +123,7 @@
                             <img src="../img/ispany.jpg" alt="alt">
                         </div>
                         <div class="match_order">
-                            <div class="btn btn_order call_form-order">
+                            <div class="btn btn_order">
                                 <svg>
                                     <use xlink:href="../img/sprites/sprite.svg#tickets"></use>
                                 </svg>
@@ -156,7 +156,7 @@
                             <img src="../img/ispany.jpg" alt="alt">
                         </div>
                         <div class="match_order">
-                            <div class="btn btn_order call_form-order">
+                            <div class="btn btn_order">
                                 <svg>
                                     <use xlink:href="../img/sprites/sprite.svg#tickets"></use>
                                 </svg>
@@ -189,7 +189,7 @@
                             <img src="../img/ispany.jpg" alt="alt">
                         </div>
                         <div class="match_order">
-                            <div class="btn btn_order call_form-order">
+                            <div class="btn btn_order">
                                 <svg>
                                     <use xlink:href="../img/sprites/sprite.svg#tickets"></use>
                                 </svg>
@@ -230,7 +230,7 @@
             </div>
         </section>
 
-        <section class="map">
+        <section class="map" id="contacts">
             <div class="container">
                 <div class="row">
                     <div class="col-8">
@@ -244,8 +244,11 @@
         </section>
         @@include("../blocks/modules/slider/slider.html")
         @@include("../blocks/modules/footer/footer.html")
-        <div id="container-popup" class="popup">
+        <div class="popup">
             @@include("../blocks/modules/form-order/form-order.html")
+        </div>
+        <div class="popup_tickets">
+            @@include("../blocks/modules/popup/popup.html")
         </div>
         <script src="../js/main.js"></script>
         <script src="../js/vendor.js"></script>

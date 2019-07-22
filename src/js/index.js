@@ -2,6 +2,9 @@ import "./import/modules.js";
 
 (function () {
 
+    const body = $("body");
+    body.after('<div class="notify"></div>');
+
     let popularMatchesCarousel = $(".popular_matches-carousel");
     if (popularMatchesCarousel.length) {
         popularMatchesCarousel.owlCarousel({
@@ -31,4 +34,23 @@ import "./import/modules.js";
         phone.mask('+0 (000) 000-00-00', {placeholder: "+_ (___) ___-__-__"});
     }
 
+    /*
+    |-----------------------------------------------------------
+    |   notification
+    |-----------------------------------------------------------
+    */
+    $.fn.notify = function(message) {
+        return this.html("<div>" + message + "</div>").fadeIn().delay(3000).fadeOut();
+    };
+
 })($);
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+$(document).ajaxError(function () {
+    return $(".is_loaded").removeClass("is_loaded") && $(".notify").notify("Произошла ошибка =(");
+});

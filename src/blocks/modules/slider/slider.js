@@ -8,7 +8,8 @@
             nav:true,
             dots:false,
             items: 1,
-            autoplay: true
+            //autoplay: true,
+            lazyLoad:true
         });
     }
 

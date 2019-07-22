@@ -77,6 +77,9 @@
     cursor: pointer;
     color: $textColor2;
     font-size: rem(14);
+    &.is_loaded {
+        color: transparent;
+    }
 }
 .btn_order {
     background-color: $bgBtnOrder;
@@ -93,6 +96,18 @@
     }
     &:hover:after {
         opacity: 1;
+    }
+    &.is_loaded:after {
+        opacity: 0;
+    }
+    &.is_loaded {
+        color: transparent;
+        svg {
+            fill: transparent;
+        }
+        &:hover {
+            cursor: not-allowed;
+        }
     }
 }
 .btn_more {
@@ -126,7 +141,7 @@
 .is_loaded {
     position: relative;
 }
-.is_loaded:after {
+.is_loaded:before {
     content: "";
     position: absolute;
     z-index: 10;
@@ -192,4 +207,19 @@
 }
 .section_default {
     margin: 2rem 0;
+}
+.notify {
+    display: none;
+    position: fixed;
+    z-index: 30;
+    top: 14%;
+    right: 0;
+    width: 320px;
+    border-top: 3px solid $bgBtnOrder;
+    box-shadow: 0 1px 4px #373737;
+    background-color: #fff;
+    > div {
+        padding: 1.5rem 2rem 1rem 1rem;
+        font-size: rem(16);
+    }
 }

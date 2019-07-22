@@ -1,15 +1,8 @@
-.popup {
+.popup, .popup_tickets {
     display: none;
+    align-items: center;
     position: fixed;
     z-index: 100;
-    top: 15%;
-    right: 0;
-    left: 0;
-}
-.popup_bg {
-    display: none;
-    position: fixed;
-    z-index: 20;
     top: 0;
     right: 0;
     bottom: 0;
@@ -20,8 +13,9 @@
     @include row-flex();
     @include col();
     @include size(12);
-    position: relative;
     background-color: #ffffff;
+    position: relative;
+    transform: translate(0, 50%);
     &-image {
         @include col();
         @include size(6);

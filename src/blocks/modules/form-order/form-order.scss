@@ -4,7 +4,7 @@
 .form_order {
     position: relative;
     max-width: 380px;
-    margin: 0 auto;
+    margin: 3rem auto 0;
     background-color: #ffffff;
     padding: 1rem 0 0 0;
     .single_block {
@@ -12,22 +12,31 @@
         display: block;
         width: 100%;
         padding: .6rem 2rem;
+
         label, input {
             display: block;
             width: 100%;
         }
+
         &.submit {
             text-align: center;
             margin: .6rem 0 0 0;
             background-color: $formFooterBg;
         }
+
         label {
             margin: 0 0 .6rem 0;
         }
+
         input {
             box-sizing: border-box;
             border: 1px solid $colorBorderInput;
             padding: 8px 12px;
+            font-size: rem(12);
+        }
+
+        &.i_agree label {
+            color: $textColor1;
         }
     }
 }
