@@ -118,10 +118,11 @@
         }
         &.active {
             background-color: $bgTabContentActive;
+            cursor: not-allowed;
         }
     }
 }
-.list_commands {
+.list_teams {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
@@ -169,6 +170,7 @@
         }
         &.active {
             background-color: $bgTabContentActive;
+            cursor: not-allowed;
         }
         span {
             margin: 0 auto;

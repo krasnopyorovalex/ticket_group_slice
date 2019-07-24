@@ -11,6 +11,13 @@
         padding: 1rem;
         background-color: $bgSchedule;
         color: $textColor1;
+        &.not_results {
+            p {
+                text-align: center;
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
         .time {
             @include lg(max-width,150px);
             font-size: rem(14);
@@ -89,6 +96,12 @@
             font-size: rem(12);
             &:hover {
                 text-decoration: underline;
+            }
+            &:before {
+                top: calc(50% - 10px);
+                left: calc(50% - 7px);
+                width: 14px;
+                height: 14px;
             }
         }
         & + .match_schedule-row {

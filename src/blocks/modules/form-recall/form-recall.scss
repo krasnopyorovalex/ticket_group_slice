@@ -33,9 +33,16 @@
             border: 1px solid #ffffff;
             padding: 8px 12px;
             font-size: rem(14);
+            line-height: normal;
         }
         textarea {
             min-height: 80px;
+        }
+        .error {
+            color: $textColor2;
+            line-height: normal;
+            margin-top: .6rem;
+            text-align: center;
         }
     }
     .btn_recall {

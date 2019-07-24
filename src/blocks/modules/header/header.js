@@ -2,10 +2,36 @@
 
     $("#sticky").sticky({zIndex: 20});
 
-    let logoBoxSearch = $(".logo_box-search");
+    const logoBoxSearch = $(".logo_box-search"),
+        matchScheduleContainer = $(".match_schedule > .container");
     if (logoBoxSearch.length) {
         logoBoxSearch.on("click", ".icon_search", function () {
-            return $(this).closest("form").submit();
+            const form = $(this).closest("form");
+
+            if (form.find("input[name=keyword]").val().length < 3) {
+                return false;
+            }
+
+            return form.submit();
+        });
+
+        logoBoxSearch.on("submit", "form", function (e) {
+            e.preventDefault();
+
+            let _this = $(this),
+                url = _this.attr('action'),
+                data = _this.serialize();
+
+            return jQuery.ajax({
+                type: "POST",
+                dataType: "html",
+                url: url,
+                data: data,
+                success: function (response) {
+                    matchScheduleContainer.html(response);
+                    return _this.trigger("reset") && $.scrollTo($(".match_schedule"), 750,  {offset: {top:-80} });
+                }
+            });
         });
     }
 

@@ -25,10 +25,10 @@
                 beforeSend: function() {
                     return submitBtn.addClass("is_loaded");
                 },
-                success: function (data) {
+                success: function (response) {
                     _this.trigger("reset") && submitBtn.removeClass("is_loaded");
 
-                    return formOrder.fadeOut() && $(".notify").notify(data.message);
+                    return formOrder.fadeOut() && $(".notify").notify(response.message);
                 }
             });
         });

@@ -16,8 +16,8 @@
                 beforeSend: function() {
                     return _this.addClass("is_loaded");
                 },
-                success: function (data) {
-                    return popupTickets.html(data) && popupTickets.fadeIn() && _this.removeClass("is_loaded");
+                success: function (response) {
+                    return popupTickets.html(response) && popupTickets.fadeIn() && _this.removeClass("is_loaded");
                 }
             });
         });
@@ -31,18 +31,26 @@
 
                 let currentPage = parseInt(_this.attr("data-current-page")) + 1;
 
-                return $.get(endpoint + "?page=" + currentPage, function (response) {
-                    _this.attr("data-current-page", currentPage);
+                return jQuery.ajax({
+                    type: "GET",
+                    dataType: "html",
+                    url: endpoint + "?page=" + currentPage,
+                    beforeSend: function() {
+                        return _this.addClass("is_loaded");
+                    },
+                    success: function (response) {
+                        _this.attr("data-current-page", currentPage);
 
-                    _this.attr("data-current-page", currentPage);
+                        _this.attr("data-current-page", currentPage);
 
-                    paginator.before(response);
+                        paginator.before(response);
 
-                    if (currentPage >= lastPage ) {
-                        paginator.remove();
+                        if (currentPage >= lastPage ) {
+                            paginator.remove();
+                        }
+
+                        return _this.removeClass("is_loaded");
                     }
-
-                    return true;
                 });
             });
         }

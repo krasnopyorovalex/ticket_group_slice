@@ -26,7 +26,11 @@
             if (box.length) {
                 box.hide() && box.html("");
             }
-            popup.find(".match_info").val(_this.attr("data-match") + ", " + _this.attr("data-time") + ", " + ticket.text().trim());
+
+            const ticketsCount = _this.closest(".tickets_item").find(".tickets_count").text();
+
+            popup.find(".match_info").val(_this.attr("data-match") + ", " + _this.attr("data-time"));
+            popup.find(".ticket_info").val(ticket.text().trim() + " - " + parseInt(ticketsCount));
             return popup.fadeIn() && popupBg.fadeIn();
         });
         popup.on("click", ".close", function () {
